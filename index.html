@@ -1,4 +1,3 @@
-```html
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -96,13 +95,11 @@ nav ul li a:hover{
     background:
     linear-gradient(
         rgba(3,15,25,.72),
-        rgba(3,15,25,.82)
+        rgba(3,15,25,.84)
     ),
-    url("https://images.unsplash.com/photo-1549317661-bd32c8ce0db2?auto=format&fit=crop&w=2000&q=85")
+    url("https://images.unsplash.com/photo-1511919884226-fd3cad34687c?auto=format&fit=crop&w=2000&q=85")
     center/cover;
 }
-
-/* carretera decorativa */
 
 .road{
     position:absolute;
@@ -290,7 +287,7 @@ section{
 }
 
 /* =========================
-   CARRETERAS RD
+   RUTAS
 ========================= */
 
 .routes{
@@ -319,8 +316,6 @@ section{
     overflow:hidden;
     border:1px solid rgba(255,255,255,.1);
 }
-
-/* líneas de carretera */
 
 .route-line{
     position:absolute;
@@ -435,10 +430,12 @@ section{
     color:white;
     position:relative;
     overflow:hidden;
+
     background:
     linear-gradient(transparent,rgba(0,0,0,.8)),
     url("https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=800&q=80")
     center/cover;
+
     transition:.3s;
 }
 
@@ -466,15 +463,35 @@ section{
 
 .vehicle-grid{
     display:grid;
-    grid-template-columns:1fr 1fr;
+    grid-template-columns:1.2fr 1fr;
     gap:60px;
     align-items:center;
 }
 
+.vehicle-photo-box{
+    position:relative;
+}
+
 .vehicle-photo{
     width:100%;
+    min-height:380px;
+    object-fit:cover;
     border-radius:20px;
-    box-shadow:0 15px 40px rgba(0,0,0,.15);
+    box-shadow:0 15px 40px rgba(0,0,0,.2);
+}
+
+.vehicle-label{
+    position:absolute;
+    bottom:20px;
+    left:20px;
+    right:20px;
+    padding:18px;
+    border-radius:12px;
+    background:rgba(5,18,30,.9);
+    color:white;
+    text-align:center;
+    font-weight:bold;
+    font-size:18px;
 }
 
 .vehicle-info h2{
@@ -504,8 +521,46 @@ section{
     border-bottom:1px solid #eee;
 }
 
-.vehicle-list li::first-letter{
-    color:#c99d28;
+/* =========================
+   GALERÍA SIENNA
+========================= */
+
+.sienna-gallery{
+    margin-top:70px;
+}
+
+.sienna-gallery h3{
+    text-align:center;
+    color:#092235;
+    font-size:30px;
+    margin-bottom:25px;
+}
+
+.gallery-grid{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:20px;
+}
+
+.gallery-card{
+    background:#f5f6f7;
+    border-radius:15px;
+    overflow:hidden;
+    box-shadow:0 8px 25px rgba(0,0,0,.08);
+}
+
+.gallery-card img{
+    width:100%;
+    height:230px;
+    object-fit:cover;
+    display:block;
+}
+
+.gallery-card p{
+    padding:15px;
+    text-align:center;
+    font-weight:bold;
+    color:#092235;
 }
 
 /* =========================
@@ -550,6 +605,7 @@ section{
     linear-gradient(rgba(5,20,32,.92),rgba(5,20,32,.92)),
     url("https://images.unsplash.com/photo-1511919884226-fd3cad34687c?auto=format&fit=crop&w=1800&q=80")
     center/cover;
+
     text-align:center;
     color:white;
 }
@@ -618,7 +674,7 @@ footer small{
 }
 
 /* =========================
-   WHATSAPP FLOTANTE
+   WHATSAPP
 ========================= */
 
 .whatsapp{
@@ -671,6 +727,9 @@ footer small{
         grid-template-columns:1fr;
     }
 
+    .gallery-grid{
+        grid-template-columns:1fr;
+    }
 }
 
 @media(max-width:600px){
@@ -723,18 +782,18 @@ footer small{
         font-size:33px;
     }
 
+    .vehicle-info h2{
+        font-size:34px;
+    }
+
 }
 
 </style>
 </head>
 
-
 <body>
 
-
-<!-- =========================
-     MENÚ
-========================= -->
+<!-- MENÚ -->
 
 <header>
 
@@ -758,9 +817,7 @@ Carlos <span>Hernández</span>
 </header>
 
 
-<!-- =========================
-     INICIO
-========================= -->
+<!-- INICIO -->
 
 <section class="hero" id="inicio">
 
@@ -789,7 +846,7 @@ Samaná, Las Terrenas, Nagua, Punta Cana y mucho más.
 <div class="buttons">
 
 <a class="btn btn-whatsapp"
-href="https://wa.me/+1 (829) 803-7997"
+href="https://wa.me/18298037997"
 target="_blank">
 💬 Reservar por WhatsApp
 </a>
@@ -806,9 +863,7 @@ href="#destinos">
 </section>
 
 
-<!-- =========================
-     SERVICIOS
-========================= -->
+<!-- SERVICIOS -->
 
 <section id="servicios">
 
@@ -823,9 +878,7 @@ Tu viaje comienza desde el momento en que reservas.
 Ofrecemos traslados privados adaptados a tus necesidades.
 </p>
 
-
 <div class="services">
-
 
 <div class="card">
 
@@ -840,7 +893,6 @@ y puntual a los principales aeropuertos del país.
 
 </div>
 
-
 <div class="card">
 
 <div class="icon">🏝️</div>
@@ -853,7 +905,6 @@ República Dominicana sin preocuparte por el transporte.
 </p>
 
 </div>
-
 
 <div class="card">
 
@@ -868,7 +919,6 @@ grupos y viajeros que buscan comodidad.
 
 </div>
 
-
 </div>
 
 </div>
@@ -876,9 +926,7 @@ grupos y viajeros que buscan comodidad.
 </section>
 
 
-<!-- =========================
-     RUTAS
-========================= -->
+<!-- RUTAS -->
 
 <section class="routes" id="rutas">
 
@@ -893,14 +941,12 @@ Conectamos diferentes puntos del país para que llegues
 a tu destino disfrutando el camino.
 </p>
 
-
 <div class="route-map">
 
 <div class="route-line line1"></div>
 <div class="route-line line2"></div>
 <div class="route-line line3"></div>
 <div class="route-line line4"></div>
-
 
 <div class="city santo-domingo">
 Santo Domingo
@@ -941,9 +987,7 @@ Santiago
 </section>
 
 
-<!-- =========================
-     DESTINOS
-========================= -->
+<!-- DESTINOS -->
 
 <section id="destinos">
 
@@ -957,57 +1001,47 @@ Destinos <span>Destacados</span>
 ¿A dónde quieres ir? Nosotros te llevamos.
 </p>
 
-
 <div class="destinations">
-
 
 <div class="destination">
 <h3>Las Terrenas</h3>
 <p>Paraíso de Samaná</p>
 </div>
 
-
 <div class="destination">
 <h3>Samaná</h3>
 <p>Naturaleza y aventura</p>
 </div>
-
 
 <div class="destination">
 <h3>Nagua</h3>
 <p>Costa nordeste</p>
 </div>
 
-
 <div class="destination">
 <h3>Santo Domingo</h3>
 <p>Capital dominicana</p>
 </div>
-
 
 <div class="destination">
 <h3>Juan Dolio</h3>
 <p>Playa y tranquilidad</p>
 </div>
 
-
 <div class="destination">
 <h3>Punta Cana</h3>
 <p>El destino turístico</p>
 </div>
-
 
 <div class="destination">
 <h3>Puerto Plata</h3>
 <p>Mar y montaña</p>
 </div>
 
-
 <div class="destination">
 <h3>Santiago</h3>
 <p>Corazón del Cibao</p>
 </div>
-
 
 </div>
 
@@ -1016,21 +1050,25 @@ Destinos <span>Destacados</span>
 </section>
 
 
-<!-- =========================
-     VEHÍCULO
-========================= -->
+<!-- VEHÍCULO -->
 
 <section class="vehicle" id="vehiculo">
 
-<div class="container vehicle-grid">
+<div class="container">
 
+<div class="vehicle-grid">
 
-<div>
+<div class="vehicle-photo-box">
 
 <img
 class="vehicle-photo"
-src="https://images.unsplash.com/photo-1549317661-bd32c8ce0db2?auto=format&fit=crop&w=1200&q=85"
-alt="Vehículo para traslados privados">
+src="https://www.edmunds.com/assets/m/toyota/sienna/2011/oem/2011_toyota_sienna_minivan_base_fq_oem_1_500.jpg"
+alt="Toyota Sienna 2011 verde oscuro">
+
+<div class="vehicle-label">
+🚐 Toyota Sienna 2011 • Verde oscuro
+</div>
+
 </div>
 
 
@@ -1038,11 +1076,11 @@ alt="Vehículo para traslados privados">
 
 <h2>
 Viaja en nuestra
-<span>Toyota Sienna</span>
+<span>Toyota Sienna 2011</span>
 </h2>
 
 <p>
-Un vehículo amplio y confortable para que puedas
+Un vehículo amplio, cómodo y confiable para que puedas
 disfrutar tus traslados por República Dominicana.
 </p>
 
@@ -1066,12 +1104,53 @@ disfrutar tus traslados por República Dominicana.
 
 </div>
 
+
+<div class="sienna-gallery">
+
+<h3>Conoce nuestro vehículo</h3>
+
+<div class="gallery-grid">
+
+<div class="gallery-card">
+
+<img
+src="https://www.edmunds.com/assets/m/toyota/sienna/2011/oem/2011_toyota_sienna_minivan_base_fq_oem_1_500.jpg"
+alt="Toyota Sienna 2011">
+
+<p>Toyota Sienna 2011</p>
+
+</div>
+
+<div class="gallery-card">
+
+<img
+src="https://www.edmunds.com/assets/m/toyota/sienna/2011/oem/2011_toyota_sienna_minivan_base_fq_oem_2_500.jpg"
+alt="Toyota Sienna 2011 exterior">
+
+<p>Diseño exterior</p>
+
+</div>
+
+<div class="gallery-card">
+
+<img
+src="https://www.edmunds.com/assets/m/toyota/sienna/2011/oem/2011_toyota_sienna_minivan_base_fq_oem_3_500.jpg"
+alt="Toyota Sienna 2011 vista lateral">
+
+<p>Espacio y confort</p>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
 </section>
 
 
-<!-- =========================
-     EXPERIENCIA
-========================= -->
+<!-- EXPERIENCIA -->
 
 <section class="experience">
 
@@ -1085,9 +1164,7 @@ disfrutar tus traslados por República Dominicana.
 Queremos que cada kilómetro de tu viaje sea una buena experiencia.
 </p>
 
-
 <div class="experience-grid">
-
 
 <div class="experience-item">
 
@@ -1104,7 +1181,6 @@ con anticipación.
 
 </div>
 
-
 <div class="experience-item">
 
 <div class="experience-number">
@@ -1120,7 +1196,6 @@ durante tu recorrido.
 
 </div>
 
-
 <div class="experience-item">
 
 <div class="experience-number">
@@ -1135,7 +1210,6 @@ Tu tranquilidad es una de nuestras principales prioridades.
 
 </div>
 
-
 </div>
 
 </div>
@@ -1143,9 +1217,7 @@ Tu tranquilidad es una de nuestras principales prioridades.
 </section>
 
 
-<!-- =========================
-     RESERVA
-========================= -->
+<!-- RESERVA -->
 
 <section class="booking">
 
@@ -1162,7 +1234,7 @@ Te responderé para coordinar tu traslado.
 
 <a
 class="btn btn-whatsapp"
-href="https://wa.me/18090000000"
+href="https://wa.me/18298037997"
 target="_blank">
 
 💬 Solicitar traslado
@@ -1174,9 +1246,7 @@ target="_blank">
 </section>
 
 
-<!-- =========================
-     CONTACTO
-========================= -->
+<!-- CONTACTO -->
 
 <section class="contact" id="contacto">
 
@@ -1196,7 +1266,7 @@ Traslados privados por toda República Dominicana.
 
 <a
 class="btn btn-whatsapp"
-href="https://wa.me/18090000000"
+href="https://wa.me/18298037997"
 target="_blank">
 
 📲 Contactar por WhatsApp
@@ -1208,9 +1278,7 @@ target="_blank">
 </section>
 
 
-<!-- =========================
-     FOOTER
-========================= -->
+<!-- FOOTER -->
 
 <footer>
 
@@ -1229,13 +1297,11 @@ Puntualidad, Confort y Seguridad
 </footer>
 
 
-<!-- =========================
-     WHATSAPP FLOTANTE
-========================= -->
+<!-- WHATSAPP FLOTANTE -->
 
 <a
 class="whatsapp"
-href="https://wa.me/18090000000"
+href="https://wa.me/18298037997"
 target="_blank"
 aria-label="WhatsApp">
 
@@ -1243,12 +1309,5 @@ aria-label="WhatsApp">
 
 </a>
 
-
 </body>
 </html>
-```
-
-</body>
-</html>
-```
-
