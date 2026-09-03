@@ -1,15 +1,15 @@
+```html
 <!DOCTYPE html>
 <html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Traslados Carlos Hernández | República Dominicana</title>
+    <title>Carlos Hernández | Traslados en República Dominicana</title>
 
-    <meta name="description" content="Traslados privados por toda República Dominicana. Comodidad, seguridad y atención personalizada.">
+    <meta name="description" content="Traslados privados por toda República Dominicana. Puntualidad, confort y seguridad con Carlos Hernández.">
 
     <style>
-
         * {
             margin: 0;
             padding: 0;
@@ -22,30 +22,33 @@
 
         body {
             font-family: Arial, Helvetica, sans-serif;
-            background: #f5f5f5;
+            background: #f5f7fa;
             color: #222;
             line-height: 1.6;
         }
 
-        /* =========================
-           BARRA DE NAVEGACIÓN
-        ========================== */
+        /* NAVEGACIÓN */
 
         header {
-            background: #0b0b0b;
+            background: #0b1f33;
             color: white;
-            padding: 18px 7%;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
             position: sticky;
             top: 0;
             z-index: 1000;
-            border-bottom: 1px solid #333;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.15);
+        }
+
+        nav {
+            max-width: 1200px;
+            margin: auto;
+            padding: 18px 25px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
         }
 
         .logo {
-            font-size: 21px;
+            font-size: 22px;
             font-weight: bold;
         }
 
@@ -53,75 +56,59 @@
             color: #d4af37;
         }
 
+        nav ul {
+            list-style: none;
+            display: flex;
+            gap: 25px;
+        }
+
         nav a {
             color: white;
             text-decoration: none;
-            margin-left: 25px;
-            font-size: 15px;
-            transition: 0.3s;
+            font-weight: bold;
         }
 
         nav a:hover {
             color: #d4af37;
         }
 
-
-        /* =========================
-           PORTADA PRINCIPAL
-        ========================== */
+        /* HERO */
 
         .hero {
-            min-height: 90vh;
+            min-height: 650px;
+            background:
+                linear-gradient(rgba(5,20,35,0.75), rgba(5,20,35,0.75)),
+                url("https://images.unsplash.com/photo-1549317661-bd32c8ce0db2?auto=format&fit=crop&w=1800&q=80")
+                center/cover;
             display: flex;
             align-items: center;
             justify-content: center;
             text-align: center;
-            padding: 60px 20px;
-
-            background:
-                radial-gradient(circle at top right, #4b3a10, transparent 35%),
-                linear-gradient(135deg, #080808, #191919);
-
             color: white;
+            padding: 40px 20px;
         }
 
         .hero-content {
-            max-width: 900px;
-        }
-
-        .small-title {
-            color: #d4af37;
-            font-size: 18px;
-            letter-spacing: 3px;
-            margin-bottom: 15px;
-            text-transform: uppercase;
+            max-width: 850px;
         }
 
         .hero h1 {
-            font-size: clamp(42px, 7vw, 80px);
-            margin-bottom: 5px;
-            letter-spacing: 2px;
+            font-size: 58px;
+            margin-bottom: 15px;
         }
 
         .hero h2 {
+            font-size: 30px;
             color: #d4af37;
-            font-size: clamp(25px, 4vw, 45px);
-            margin-bottom: 25px;
+            margin-bottom: 20px;
         }
 
         .hero p {
-            font-size: 20px;
-            color: #ddd;
-            max-width: 700px;
-            margin: 0 auto 35px;
+            font-size: 21px;
+            margin-bottom: 35px;
         }
 
-
-        /* =========================
-           BOTONES
-        ========================== */
-
-        .btn {
+        .button {
             display: inline-block;
             background: #d4af37;
             color: #111;
@@ -129,732 +116,497 @@
             border-radius: 8px;
             text-decoration: none;
             font-weight: bold;
-            margin: 6px;
+            font-size: 18px;
             transition: 0.3s;
         }
 
-        .btn:hover {
+        .button:hover {
             transform: translateY(-3px);
-            background: #f1d16a;
+            background: #f0cc55;
         }
 
-        .btn-outline {
-            background: transparent;
-            border: 1px solid #d4af37;
+        .button-whatsapp {
+            background: #25D366;
             color: white;
         }
 
-        .btn-outline:hover {
-            color: #111;
+        .button-whatsapp:hover {
+            background: #1ebe5d;
         }
 
-
-        /* =========================
-           SECCIONES
-        ========================== */
+        /* SECCIONES */
 
         section {
-            padding: 80px 7%;
+            padding: 80px 20px;
         }
 
-        .section-title {
-            text-align: center;
-            margin-bottom: 45px;
-        }
-
-        .section-title h2 {
-            font-size: 38px;
-            margin-bottom: 10px;
-        }
-
-        .section-title p {
-            color: #666;
-            font-size: 17px;
-        }
-
-
-        /* =========================
-           SERVICIOS
-        ========================== */
-
-        .cards {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-            gap: 25px;
+        .container {
             max-width: 1100px;
             margin: auto;
         }
 
+        .section-title {
+            text-align: center;
+            font-size: 38px;
+            margin-bottom: 15px;
+            color: #0b1f33;
+        }
+
+        .section-description {
+            text-align: center;
+            max-width: 700px;
+            margin: 0 auto 45px;
+            color: #666;
+            font-size: 18px;
+        }
+
+        /* SERVICIOS */
+
+        .services {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 25px;
+        }
+
         .card {
             background: white;
-            padding: 30px;
-            border-radius: 15px;
+            padding: 35px 25px;
+            border-radius: 12px;
             text-align: center;
             box-shadow: 0 5px 20px rgba(0,0,0,0.08);
             transition: 0.3s;
         }
 
         .card:hover {
-            transform: translateY(-7px);
+            transform: translateY(-6px);
         }
 
-        .card .icon {
+        .card-icon {
             font-size: 45px;
             margin-bottom: 15px;
         }
 
         .card h3 {
+            color: #0b1f33;
             margin-bottom: 10px;
+            font-size: 23px;
         }
 
-        .card p {
-            color: #666;
-        }
-
-
-        /* =========================
-           VEHÍCULO
-        ========================== */
+        /* VEHÍCULO */
 
         .vehicle {
-            background: #101010;
+            background: #0b1f33;
             color: white;
         }
 
-        .vehicle-container {
-            max-width: 1100px;
-            margin: auto;
+        .vehicle-content {
             display: grid;
             grid-template-columns: 1fr 1fr;
             gap: 50px;
             align-items: center;
         }
 
-        .vehicle-box {
-            min-height: 330px;
-            border-radius: 20px;
-
-            background:
-                radial-gradient(circle at center, #444, #111);
-
-            display: flex;
-            align-items: center;
-            justify-content: center;
-
-            font-size: 130px;
-
-            border: 1px solid #444;
+        .vehicle-image {
+            width: 100%;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.3);
         }
 
         .vehicle h2 {
-            font-size: 42px;
-            margin-bottom: 10px;
-        }
-
-        .vehicle h3 {
-            color: #d4af37;
-            font-size: 27px;
+            font-size: 40px;
             margin-bottom: 20px;
         }
 
         .vehicle p {
-            color: #ccc;
-            margin-bottom: 20px;
+            font-size: 18px;
+            margin-bottom: 15px;
         }
 
         .features {
             list-style: none;
+            margin-top: 25px;
         }
 
         .features li {
-            margin: 12px 0;
-            color: #ddd;
+            margin-bottom: 12px;
+            font-size: 18px;
         }
 
-
-        /* =========================
-           DESTINOS
-        ========================== */
+        /* DESTINOS */
 
         .destinations {
-            max-width: 1000px;
-            margin: auto;
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-            gap: 12px;
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 15px;
         }
 
         .destination {
             background: white;
-            padding: 13px 20px;
-            border-radius: 30px;
-            box-shadow: 0 3px 10px rgba(0,0,0,0.08);
+            padding: 22px;
+            text-align: center;
+            border-radius: 10px;
             font-weight: bold;
+            box-shadow: 0 3px 12px rgba(0,0,0,0.08);
         }
 
+        /* CONTACTO */
 
-        /* =========================
-           POR QUÉ ELEGIRNOS
-        ========================== */
-
-        .why {
-            background: #eeeeee;
-        }
-
-
-        /* =========================
-           RESERVACIÓN
-        ========================== */
-
-        .booking {
-            background:
-                radial-gradient(circle at top left, #493a10, transparent 30%),
-                linear-gradient(135deg, #1b1b1b, #080808);
-
-            color: white;
+        .contact {
+            background: #eef1f5;
             text-align: center;
         }
 
-        .booking h2 {
-            font-size: 42px;
+        .contact-box {
+            background: white;
+            max-width: 700px;
+            margin: auto;
+            padding: 45px 25px;
+            border-radius: 15px;
+            box-shadow: 0 5px 25px rgba(0,0,0,0.1);
+        }
+
+        .contact-box h2 {
+            color: #0b1f33;
             margin-bottom: 15px;
+            font-size: 35px;
         }
 
-        .booking p {
-            color: #ccc;
+        .contact-box p {
+            margin-bottom: 25px;
             font-size: 18px;
-            max-width: 650px;
-            margin: 0 auto 25px;
         }
 
-        .phone {
-            margin-top: 20px;
-            font-size: 19px;
-            color: #d4af37;
-            font-weight: bold;
-        }
-
-
-        /* =========================
-           FOOTER
-        ========================== */
+        /* FOOTER */
 
         footer {
-            background: #050505;
-            color: #999;
-            text-align: center;
-            padding: 35px 20px;
-        }
-
-        footer strong {
+            background: #071522;
             color: white;
+            text-align: center;
+            padding: 30px 20px;
         }
 
-        footer .slogan {
+        footer p {
+            margin: 5px;
+        }
+
+        .gold {
             color: #d4af37;
-            margin: 8px 0;
         }
 
+        /* WHATSAPP FLOTANTE */
 
-        /* =========================
-           CELULARES
-        ========================== */
+        .whatsapp {
+            position: fixed;
+            bottom: 25px;
+            right: 25px;
+            background: #25D366;
+            color: white;
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-decoration: none;
+            font-size: 30px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+            z-index: 2000;
+        }
 
-        @media (max-width: 750px) {
+        /* MÓVILES */
 
-            header {
-                flex-direction: column;
-                gap: 15px;
-            }
+        @media (max-width: 800px) {
 
             nav {
-                text-align: center;
+                flex-direction: column;
+                gap: 12px;
             }
 
-            nav a {
-                margin: 0 7px;
-                font-size: 13px;
+            nav ul {
+                gap: 12px;
+                flex-wrap: wrap;
+                justify-content: center;
             }
 
             .hero {
-                min-height: 80vh;
+                min-height: 600px;
+            }
+
+            .hero h1 {
+                font-size: 40px;
+            }
+
+            .hero h2 {
+                font-size: 24px;
             }
 
             .hero p {
-                font-size: 17px;
+                font-size: 18px;
             }
 
-            section {
-                padding: 60px 5%;
-            }
-
-            .vehicle-container {
+            .services {
                 grid-template-columns: 1fr;
             }
 
-            .vehicle-box {
-                min-height: 240px;
-                font-size: 90px;
+            .vehicle-content {
+                grid-template-columns: 1fr;
             }
 
-            .vehicle h2 {
-                font-size: 35px;
+            .destinations {
+                grid-template-columns: repeat(2, 1fr);
             }
 
-            .booking h2 {
-                font-size: 34px;
+            .section-title {
+                font-size: 31px;
             }
         }
 
+        @media (max-width: 500px) {
+
+            .destinations {
+                grid-template-columns: 1fr;
+            }
+
+            .hero h1 {
+                font-size: 34px;
+            }
+
+            .hero h2 {
+                font-size: 21px;
+            }
+
+            .button {
+                width: 100%;
+                margin-bottom: 10px;
+            }
+        }
     </style>
 </head>
 
-
 <body>
 
-
-    <!-- =========================
-         NAVEGACIÓN
-    ========================== -->
-
-    <header>
-
+<header>
+    <nav>
         <div class="logo">
             Carlos <span>Hernández</span>
         </div>
 
-        <nav>
-            <a href="#inicio">Inicio</a>
-            <a href="#servicios">Servicios</a>
-            <a href="#vehiculo">Vehículo</a>
-            <a href="#destinos">Destinos</a>
-            <a href="#contacto">Contacto</a>
-        </nav>
-
-    </header>
-
-
-
-    <!-- =========================
-         INICIO
-    ========================== -->
-
-    <section class="hero" id="inicio">
-
-        <div class="hero-content">
-
-            <div class="small-title">
-                Traslados privados en República Dominicana
-            </div>
-
-            <h1>
-                CARLOS HERNÁNDEZ
-            </h1>
-
-            <h2>
-                PRESTIGIA TUS TRASLADOS
-            </h2>
-
-            <p>
-                Viaja con comodidad, seguridad y atención personalizada.
-                Te llevamos a diferentes destinos de República Dominicana.
-            </p>
-
-            <a class="btn" href="#contacto">
-                SOLICITAR TRASLADO
-            </a>
-
-            <a class="btn btn-outline" href="#destinos">
-                VER DESTINOS
-            </a>
-
-        </div>
-
-    </section>
+        <ul>
+            <li><a href="#inicio">Inicio</a></li>
+            <li><a href="#servicios">Servicios</a></li>
+            <li><a href="#vehiculo">Vehículo</a></li>
+            <li><a href="#destinos">Destinos</a></li>
+            <li><a href="#contacto">Contacto</a></li>
+        </ul>
+    </nav>
+</header>
 
 
+<!-- INICIO -->
 
-    <!-- =========================
-         SERVICIOS
-    ========================== -->
+<section class="hero" id="inicio">
 
-    <section id="servicios">
+    <div class="hero-content">
 
-        <div class="section-title">
+        <h1>Carlos Hernández</h1>
 
-            <h2>
-                Nuestros servicios
-            </h2>
+        <h2>Puntualidad, confort y seguridad</h2>
 
-            <p>
-                Una experiencia cómoda y personalizada para cada viaje.
-            </p>
+        <p>
+            Traslados privados por toda la República Dominicana.
+            Viaja cómodo, seguro y con la atención que mereces.
+        </p>
 
-        </div>
+        <!-- CAMBIAR EL NÚMERO DE WHATSAPP -->
+        <a class="button button-whatsapp"
+           href="https://wa.me/18090000000"
+           target="_blank">
+            💬 Reservar por WhatsApp
+        </a>
+
+    </div>
+
+</section>
 
 
-        <div class="cards">
+<!-- SERVICIOS -->
 
+<section id="servicios">
+
+    <div class="container">
+
+        <h2 class="section-title">Nuestros Servicios</h2>
+
+        <p class="section-description">
+            Ofrecemos traslados privados y personalizados
+            para que puedas recorrer República Dominicana
+            con comodidad y tranquilidad.
+        </p>
+
+        <div class="services">
 
             <div class="card">
-
-                <div class="icon">
-                    🚐
-                </div>
-
-                <h3>
-                    Traslados privados
-                </h3>
-
+                <div class="card-icon">✈️</div>
+                <h3>Traslados al aeropuerto</h3>
                 <p>
-                    Servicio exclusivo para llevarte directamente
-                    hasta tu destino.
+                    Servicio privado desde o hacia los principales
+                    aeropuertos de República Dominicana.
                 </p>
-
             </div>
-
-
 
             <div class="card">
-
-                <div class="icon">
-                    🛡️
-                </div>
-
-                <h3>
-                    Seguridad
-                </h3>
-
+                <div class="card-icon">🏖️</div>
+                <h3>Traslados turísticos</h3>
                 <p>
-                    Conducción responsable y atención durante
-                    todo el recorrido.
+                    Conoce los destinos turísticos del país
+                    viajando cómodamente.
                 </p>
-
             </div>
-
-
 
             <div class="card">
-
-                <div class="icon">
-                    ⏰
-                </div>
-
-                <h3>
-                    Puntualidad
-                </h3>
-
+                <div class="card-icon">🚐</div>
+                <h3>Traslados privados</h3>
                 <p>
-                    Coordinamos previamente tu traslado para
-                    facilitar tu viaje.
-                </p>
-
-            </div>
-
-
-
-            <div class="card">
-
-                <div class="icon">
-                    🇩🇴
-                </div>
-
-                <h3>
-                    Todo el país
-                </h3>
-
-                <p>
-                    Traslados hacia diferentes destinos
-                    dentro de República Dominicana.
-                </p>
-
-            </div>
-
-
-        </div>
-
-    </section>
-
-
-
-    <!-- =========================
-         VEHÍCULO
-    ========================== -->
-
-    <section class="vehicle" id="vehiculo">
-
-        <div class="vehicle-container">
-
-
-            <div class="vehicle-box">
-                🚐
-            </div>
-
-
-            <div>
-
-                <h2>
-                    Tu viaje comienza aquí
-                </h2>
-
-                <h3>
-                    Toyota Sienna
-                </h3>
-
-                <p>
-                    Disfruta de un traslado cómodo y privado
-                    en una Toyota Sienna, ideal para familias,
+                    Viajes personalizados para familias,
                     parejas y grupos.
                 </p>
-
-
-                <ul class="features">
-
-                    <li>
-                        ✓ Amplio espacio interior
-                    </li>
-
-                    <li>
-                        ✓ Comodidad para los pasajeros
-                    </li>
-
-                    <li>
-                        ✓ Ideal para viajes familiares
-                    </li>
-
-                    <li>
-                        ✓ Servicio privado
-                    </li>
-
-                    <li>
-                        ✓ Atención personalizada
-                    </li>
-
-                </ul>
-
             </div>
 
         </div>
 
-    </section>
+    </div>
+
+</section>
 
 
+<!-- VEHÍCULO -->
 
-    <!-- =========================
-         DESTINOS
-    ========================== -->
+<section class="vehicle" id="vehiculo">
 
-    <section id="destinos">
+    <div class="container vehicle-content">
 
-        <div class="section-title">
+        <div>
 
-            <h2>
-                Destinos
-            </h2>
+            <h2>Toyota Sienna</h2>
 
             <p>
-                Llegamos a diferentes puntos de República Dominicana.
+                Viaja en un vehículo espacioso, cómodo y preparado
+                para ofrecerte una experiencia agradable durante
+                tu traslado.
             </p>
+
+            <ul class="features">
+                <li>✓ Amplio espacio para pasajeros</li>
+                <li>✓ Comodidad para viajes largos</li>
+                <li>✓ Ideal para familias y grupos</li>
+                <li>✓ Servicio privado</li>
+                <li>✓ Puntualidad y seguridad</li>
+            </ul>
 
         </div>
 
+        <div>
+
+            <img
+                class="vehicle-image"
+                src="https://images.unsplash.com/photo-1549317661-bd32c8ce0db2?auto=format&fit=crop&w=1000&q=80"
+                alt="Vehículo para traslados privados">
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- DESTINOS -->
+
+<section id="destinos">
+
+    <div class="container">
+
+        <h2 class="section-title">Llegamos a todo el país</h2>
+
+        <p class="section-description">
+            Traslados hacia diferentes destinos de República Dominicana.
+        </p>
 
         <div class="destinations">
 
-            <div class="destination">
-                📍 Santo Domingo
-            </div>
-
-            <div class="destination">
-                📍 Punta Cana
-            </div>
-
-            <div class="destination">
-                📍 Bávaro
-            </div>
-
-            <div class="destination">
-                📍 La Romana
-            </div>
-
-            <div class="destination">
-                📍 Bayahíbe
-            </div>
-
-            <div class="destination">
-                📍 Samaná
-            </div>
-
-            <div class="destination">
-                📍 Las Terrenas
-            </div>
-
-            <div class="destination">
-                📍 Puerto Plata
-            </div>
-
-            <div class="destination">
-                📍 Santiago
-            </div>
-
-            <div class="destination">
-                📍 Juan Dolio
-            </div>
-
-            <div class="destination">
-                📍 Boca Chica
-            </div>
-
-            <div class="destination">
-                📍 Otros destinos
-            </div>
+            <div class="destination">🇩🇴 Santo Domingo</div>
+            <div class="destination">🌴 Punta Cana</div>
+            <div class="destination">🏝️ Samaná</div>
+            <div class="destination">🌊 Las Terrenas</div>
+            <div class="destination">🏖️ Puerto Plata</div>
+            <div class="destination">🌴 La Romana</div>
+            <div class="destination">🌊 Bayahíbe</div>
+            <div class="destination">🏙️ Santiago</div>
+            <div class="destination">🌴 Bávaro</div>
+            <div class="destination">🏝️ Juan Dolio</div>
+            <div class="destination">🌊 Boca Chica</div>
+            <div class="destination">📍 Y mucho más</div>
 
         </div>
 
-    </section>
+    </div>
+
+</section>
 
 
+<!-- CONTACTO -->
 
-    <!-- =========================
-         POR QUÉ ELEGIRNOS
-    ========================== -->
+<section class="contact" id="contacto">
 
-    <section class="why">
+    <div class="contact-box">
 
-        <div class="section-title">
-
-            <h2>
-                ¿Por qué elegirnos?
-            </h2>
-
-            <p>
-                Queremos que tu traslado sea parte de una buena experiencia.
-            </p>
-
-        </div>
-
-
-        <div class="cards">
-
-
-            <div class="card">
-
-                <div class="icon">
-                    ⭐
-                </div>
-
-                <h3>
-                    Atención personalizada
-                </h3>
-
-                <p>
-                    Coordinamos cada viaje tomando en cuenta
-                    tus necesidades.
-                </p>
-
-            </div>
-
-
-
-            <div class="card">
-
-                <div class="icon">
-                    🕐
-                </div>
-
-                <h3>
-                    Coordinación previa
-                </h3>
-
-                <p>
-                    Organizamos los detalles del traslado
-                    antes de tu viaje.
-                </p>
-
-            </div>
-
-
-
-            <div class="card">
-
-                <div class="icon">
-                    🧳
-                </div>
-
-                <h3>
-                    Comodidad
-                </h3>
-
-                <p>
-                    Un espacio pensado para que puedas
-                    disfrutar el recorrido.
-                </p>
-
-            </div>
-
-
-        </div>
-
-    </section>
-
-
-
-    <!-- =========================
-         CONTACTO
-    ========================== -->
-
-    <section class="booking" id="contacto">
-
-        <h2>
-            ¿Necesitas un traslado?
-        </h2>
+        <h2>¿Necesitas un traslado?</h2>
 
         <p>
-            Escríbeme por WhatsApp y coordinamos tu viaje,
-            destino y horario.
+            Comunícate con Carlos Hernández y reserva
+            tu traslado de manera rápida y sencilla.
         </p>
 
-
-        <a
-            class="btn"
-            href="https://wa.me/18298037997?text=Hola%20Carlos%2C%20quiero%20informaci%C3%B3n%20sobre%20un%20traslado."
-            target="_blank"
-        >
-            💬 RESERVAR POR WHATSAPP
+        <a class="button button-whatsapp"
+           href="https://wa.me/18090000000"
+           target="_blank">
+            💬 Contactar por WhatsApp
         </a>
 
+    </div>
 
-        <div class="phone">
-            📞 +1 (829) 803-7997
-        </div>
-
-    </section>
+</section>
 
 
+<!-- FOOTER -->
 
-    <!-- =========================
-         PIE DE PÁGINA
-    ========================== -->
+<footer>
 
-    <footer>
+    <p>
+        <strong>Carlos Hernández Traslados</strong>
+    </p>
 
-        <p>
-            <strong>
-                Traslados Carlos Hernández
-            </strong>
-        </p>
+    <p class="gold">
+        Puntualidad, confort y seguridad
+    </p>
 
-        <p class="slogan">
-        Puntualidad Confort y Seguriddad 🇩🇴
-        </p>
+    <p>
+        © 2026 Carlos Hernández. Todos los derechos reservados.
+    </p>
 
-        <p>
-            © 2026 Carlos Hernández. Todos los derechos reservados.
-        </p>
+</footer>
 
-    </footer>
 
+<!-- WHATSAPP FLOTANTE -->
+
+<a
+    class="whatsapp"
+    href="https://wa.me/18090000000"
+    target="_blank"
+    aria-label="Contactar por WhatsApp">
+    💬
+</a>
 
 </body>
 </html>
+```
+
