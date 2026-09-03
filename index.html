@@ -1,3 +1,4 @@
+```html
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -9,10 +10,6 @@
 <meta name="description" content="Carlos Hernández - Traslados privados por toda República Dominicana. Puntualidad, Confort y Seguridad.">
 
 <style>
-
-/* =========================
-   GENERAL
-========================= */
 
 *{
     margin:0;
@@ -30,35 +27,6 @@ body{
     color:#17202a;
 }
 
-section{
-    padding:90px 20px;
-}
-
-.container{
-    max-width:1150px;
-    margin:auto;
-}
-
-.section-title{
-    text-align:center;
-    font-size:42px;
-    color:#092235;
-    margin-bottom:15px;
-}
-
-.section-title span{
-    color:#c99d28;
-}
-
-.section-subtitle{
-    text-align:center;
-    max-width:700px;
-    margin:0 auto 50px;
-    color:#69737d;
-    font-size:18px;
-    line-height:1.6;
-}
-
 /* =========================
    NAVBAR
 ========================= */
@@ -68,7 +36,8 @@ header{
     top:0;
     width:100%;
     z-index:1000;
-    background:rgba(5,18,30,.97);
+    background:rgba(5,18,30,.96);
+    backdrop-filter:blur(10px);
     border-bottom:1px solid rgba(255,255,255,.12);
 }
 
@@ -115,7 +84,7 @@ nav ul li a:hover{
 
 .hero{
     min-height:100vh;
-    padding:150px 20px 100px;
+    padding:140px 20px 80px;
     display:flex;
     align-items:center;
     justify-content:center;
@@ -125,34 +94,23 @@ nav ul li a:hover{
     overflow:hidden;
 
     background:
-    radial-gradient(
-        circle at 50% 20%,
-        #16405a 0%,
-        #071b2c 45%,
-        #020c14 100%
-    );
+    linear-gradient(
+        rgba(3,15,25,.72),
+        rgba(3,15,25,.82)
+    ),
+    url("https://images.unsplash.com/photo-1549317661-bd32c8ce0db2?auto=format&fit=crop&w=2000&q=85")
+    center/cover;
 }
 
-.hero:after{
-    content:"";
-    position:absolute;
-    bottom:0;
-    left:0;
-    width:100%;
-    height:180px;
-    background:linear-gradient(
-        transparent,
-        rgba(0,0,0,.55)
-    );
-}
+/* carretera decorativa */
 
 .road{
     position:absolute;
-    bottom:-100px;
+    bottom:-80px;
     left:-10%;
     width:120%;
-    height:250px;
-    background:#20252a;
+    height:230px;
+    background:#222;
     transform:rotate(-4deg);
     opacity:.9;
 }
@@ -164,7 +122,6 @@ nav ul li a:hover{
     left:0;
     width:100%;
     height:8px;
-
     background:repeating-linear-gradient(
         90deg,
         #e8d477 0,
@@ -176,7 +133,7 @@ nav ul li a:hover{
 
 .hero-content{
     position:relative;
-    z-index:5;
+    z-index:2;
     max-width:900px;
 }
 
@@ -254,6 +211,38 @@ nav ul li a:hover{
 }
 
 /* =========================
+   SECCIONES
+========================= */
+
+section{
+    padding:90px 20px;
+}
+
+.container{
+    max-width:1150px;
+    margin:auto;
+}
+
+.section-title{
+    text-align:center;
+    font-size:42px;
+    color:#092235;
+    margin-bottom:15px;
+}
+
+.section-title span{
+    color:#c99d28;
+}
+
+.section-subtitle{
+    text-align:center;
+    max-width:700px;
+    margin:0 auto 50px;
+    color:#69737d;
+    font-size:18px;
+}
+
+/* =========================
    SERVICIOS
 ========================= */
 
@@ -301,7 +290,7 @@ nav ul li a:hover{
 }
 
 /* =========================
-   RUTAS
+   CARRETERAS RD
 ========================= */
 
 .routes{
@@ -323,15 +312,15 @@ nav ul li a:hover{
     position:relative;
     min-height:450px;
     border-radius:25px;
-
     background:
     radial-gradient(circle at 20% 30%,rgba(34,197,94,.2),transparent 20%),
     radial-gradient(circle at 80% 70%,rgba(14,165,233,.2),transparent 25%),
     #102b3d;
-
     overflow:hidden;
     border:1px solid rgba(255,255,255,.1);
 }
+
+/* líneas de carretera */
 
 .route-line{
     position:absolute;
@@ -437,7 +426,7 @@ nav ul li a:hover{
 }
 
 .destination{
-    min-height:180px;
+    min-height:170px;
     border-radius:15px;
     padding:25px;
     display:flex;
@@ -446,14 +435,10 @@ nav ul li a:hover{
     color:white;
     position:relative;
     overflow:hidden;
-
     background:
-    linear-gradient(
-        135deg,
-        #087f8c,
-        #06435b
-    );
-
+    linear-gradient(transparent,rgba(0,0,0,.8)),
+    url("https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=800&q=80")
+    center/cover;
     transition:.3s;
 }
 
@@ -481,379 +466,15 @@ nav ul li a:hover{
 
 .vehicle-grid{
     display:grid;
-    grid-template-columns:1.15fr 1fr;
+    grid-template-columns:1fr 1fr;
     gap:60px;
     align-items:center;
 }
 
-/* CONTENEDOR DEL VEHÍCULO */
-
-.sienna-scene{
-    position:relative;
+.vehicle-photo{
     width:100%;
-    height:390px;
-    border-radius:22px;
-    overflow:hidden;
-
-    background:
-    linear-gradient(
-        to bottom,
-        #b9e2f0 0%,
-        #dff2f5 55%,
-        #55714e 55%,
-        #263c27 100%
-    );
-
-    box-shadow:0 15px 40px rgba(0,0,0,.2);
-}
-
-/* SOL */
-
-.sun{
-    position:absolute;
-    width:70px;
-    height:70px;
-    border-radius:50%;
-    background:#ffe08a;
-    top:40px;
-    right:60px;
-    box-shadow:0 0 40px rgba(255,224,138,.6);
-}
-
-/* PALMERAS */
-
-.palm{
-    position:absolute;
-    bottom:130px;
-    width:15px;
-    height:150px;
-    background:#513d28;
-    border-radius:10px;
-}
-
-.palm:before{
-    content:"🌴";
-    position:absolute;
-    font-size:75px;
-    top:-65px;
-    left:-35px;
-}
-
-.palm-one{
-    left:45px;
-}
-
-.palm-two{
-    right:40px;
-    transform:scale(.8);
-}
-
-/* CARRETERA */
-
-.sienna-road{
-    position:absolute;
-    bottom:0;
-    left:0;
-    width:100%;
-    height:125px;
-    background:#292d30;
-}
-
-.sienna-road:after{
-    content:"";
-    position:absolute;
-    top:58px;
-    left:0;
-    width:100%;
-    height:7px;
-
-    background:repeating-linear-gradient(
-        90deg,
-        #e5c957 0,
-        #e5c957 65px,
-        transparent 65px,
-        transparent 120px
-    );
-}
-
-/* =========================
-   TOYOTA SIENNA CSS
-========================= */
-
-.sienna{
-    position:absolute;
-    width:390px;
-    height:170px;
-    left:50%;
-    bottom:75px;
-    transform:translateX(-50%);
-}
-
-/* CUERPO */
-
-.sienna-body{
-    position:absolute;
-    left:30px;
-    bottom:28px;
-    width:330px;
-    height:100px;
-
-    background:
-    linear-gradient(
-        to bottom,
-        #315f43,
-        #173a27 55%,
-        #102a1c
-    );
-
-    border-radius:38px 48px 18px 18px;
-
-    border:3px solid #0c2116;
-
-    box-shadow:
-    inset 0 -12px 15px rgba(0,0,0,.3),
-    0 12px 15px rgba(0,0,0,.4);
-}
-
-/* PARTE SUPERIOR */
-
-.sienna-roof{
-    position:absolute;
-    left:80px;
-    top:8px;
-    width:225px;
-    height:85px;
-
-    background:#244d35;
-
-    border-radius:70px 70px 8px 8px;
-
-    border:3px solid #0c2116;
-}
-
-/* VENTANAS */
-
-.window-front,
-.window-back{
-    position:absolute;
-    top:14px;
-    height:48px;
-
-    background:
-    linear-gradient(
-        135deg,
-        #1b3c50,
-        #07151d
-    );
-
-    border:2px solid #0a1d28;
-}
-
-.window-front{
-    left:112px;
-    width:83px;
-    border-radius:35px 5px 5px 5px;
-}
-
-.window-back{
-    left:202px;
-    width:78px;
-    border-radius:5px 30px 5px 5px;
-}
-
-/* REFLEJO VIDRIOS */
-
-.window-front:after,
-.window-back:after{
-    content:"";
-    position:absolute;
-    width:45px;
-    height:3px;
-    background:rgba(255,255,255,.35);
-    transform:rotate(-25deg);
-    top:14px;
-    left:15px;
-}
-
-/* PARABRISAS */
-
-.windshield{
-    position:absolute;
-    left:73px;
-    top:21px;
-    width:42px;
-    height:57px;
-    background:#102d3b;
-    transform:skew(-15deg);
-    border:2px solid #0a1d28;
-}
-
-/* LUCES */
-
-.headlight{
-    position:absolute;
-    width:36px;
-    height:22px;
-    background:#fff4bd;
-    border-radius:50%;
-    top:62px;
-    box-shadow:0 0 18px rgba(255,244,189,.7);
-}
-
-.headlight-left{
-    left:25px;
-}
-
-.headlight-right{
-    right:25px;
-}
-
-/* PARRILLA */
-
-.grille{
-    position:absolute;
-    left:136px;
-    bottom:42px;
-    width:110px;
-    height:30px;
-
-    border:4px solid #8b9295;
-    border-radius:5px;
-
-    background:
-    repeating-linear-gradient(
-        0deg,
-        #202629 0,
-        #202629 4px,
-        #9ba1a3 4px,
-        #9ba1a3 6px
-    );
-}
-
-/* EMBLEMA */
-
-.toyota-logo{
-    position:absolute;
-    left:181px;
-    bottom:50px;
-    width:22px;
-    height:22px;
-    border:2px solid white;
-    border-radius:50%;
-    color:white;
-    font-size:10px;
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    font-weight:bold;
-    background:#173a27;
-}
-
-/* PARACHOQUES */
-
-.bumper{
-    position:absolute;
-    left:20px;
-    bottom:20px;
-    width:340px;
-    height:18px;
-    background:#101719;
-    border-radius:10px;
-}
-
-/* RUEDAS */
-
-.wheel{
-    position:absolute;
-    width:57px;
-    height:57px;
-    border-radius:50%;
-
-    background:#111;
-
-    border:7px solid #24292b;
-
-    box-shadow:
-    inset 0 0 0 7px #555,
-    0 5px 8px rgba(0,0,0,.5);
-}
-
-.wheel-left{
-    left:68px;
-    bottom:5px;
-}
-
-.wheel-right{
-    right:68px;
-    bottom:5px;
-}
-
-.wheel:after{
-    content:"";
-    position:absolute;
-    width:16px;
-    height:16px;
-    border-radius:50%;
-    background:#aeb2b3;
-    top:13px;
-    left:13px;
-}
-
-/* ESPEJOS */
-
-.mirror{
-    position:absolute;
-    width:23px;
-    height:14px;
-    background:#172d23;
-    border:2px solid #0a1710;
-    border-radius:8px;
-    top:75px;
-}
-
-.mirror-left{
-    left:55px;
-}
-
-.mirror-right{
-    right:55px;
-}
-
-/* SOMBRA */
-
-.car-shadow{
-    position:absolute;
-    left:50%;
-    transform:translateX(-50%);
-    bottom:55px;
-    width:390px;
-    height:25px;
-    border-radius:50%;
-    background:rgba(0,0,0,.45);
-    filter:blur(5px);
-}
-
-/* INFORMACIÓN DEL VEHÍCULO */
-
-.vehicle-label{
-    position:absolute;
-    left:20px;
-    right:20px;
-    bottom:18px;
-
-    padding:14px;
-
-    border-radius:12px;
-
-    background:rgba(5,18,30,.92);
-
-    color:white;
-    text-align:center;
-
-    font-weight:bold;
-    font-size:17px;
-
-    z-index:10;
+    border-radius:20px;
+    box-shadow:0 15px 40px rgba(0,0,0,.15);
 }
 
 .vehicle-info h2{
@@ -883,92 +504,8 @@ nav ul li a:hover{
     border-bottom:1px solid #eee;
 }
 
-/* GALERÍA */
-
-.sienna-gallery{
-    margin-top:70px;
-}
-
-.sienna-gallery h3{
-    text-align:center;
-    color:#092235;
-    font-size:30px;
-    margin-bottom:25px;
-}
-
-.gallery-grid{
-    display:grid;
-    grid-template-columns:repeat(3,1fr);
-    gap:20px;
-}
-
-.gallery-card{
-    background:#f5f6f7;
-    border-radius:15px;
-    overflow:hidden;
-    box-shadow:0 8px 25px rgba(0,0,0,.08);
-    padding:20px;
-    text-align:center;
-}
-
-/* MINI SIENNAS */
-
-.mini-sienna{
-    height:150px;
-    position:relative;
-    overflow:hidden;
-    background:
-    linear-gradient(
-        to bottom,
-        #b8dce5 0%,
-        #b8dce5 60%,
-        #555 60%,
-        #303030 100%
-    );
-    border-radius:10px;
-    margin-bottom:15px;
-}
-
-.mini-car{
-    position:absolute;
-    width:220px;
-    height:75px;
-    left:50%;
-    bottom:28px;
-    transform:translateX(-50%);
-    background:#244f35;
-    border-radius:25px 30px 10px 10px;
-    border:3px solid #0b2115;
-}
-
-.mini-car:before{
-    content:"";
-    position:absolute;
-    left:55px;
-    top:-32px;
-    width:125px;
-    height:40px;
-    background:#244f35;
-    border-radius:40px 40px 5px 5px;
-    border:3px solid #0b2115;
-}
-
-.mini-car:after{
-    content:"";
-    position:absolute;
-    width:40px;
-    height:40px;
-    border-radius:50%;
-    background:#111;
-    border:6px solid #555;
-    left:35px;
-    bottom:-24px;
-    box-shadow:105px 0 0 #111, 105px 0 0 6px #555;
-}
-
-.gallery-card p{
-    font-weight:bold;
-    color:#092235;
+.vehicle-list li::first-letter{
+    color:#c99d28;
 }
 
 /* =========================
@@ -1002,7 +539,6 @@ nav ul li a:hover{
 
 .experience-item p{
     color:#69737d;
-    line-height:1.6;
 }
 
 /* =========================
@@ -1011,12 +547,9 @@ nav ul li a:hover{
 
 .booking{
     background:
-    linear-gradient(
-        135deg,
-        #061725,
-        #123d52
-    );
-
+    linear-gradient(rgba(5,20,32,.92),rgba(5,20,32,.92)),
+    url("https://images.unsplash.com/photo-1511919884226-fd3cad34687c?auto=format&fit=crop&w=1800&q=80")
+    center/cover;
     text-align:center;
     color:white;
 }
@@ -1031,7 +564,6 @@ nav ul li a:hover{
     max-width:650px;
     margin:0 auto 30px;
     color:#d4dce1;
-    line-height:1.6;
 }
 
 /* =========================
@@ -1058,7 +590,7 @@ nav ul li a:hover{
 .contact-box p{
     color:#68737d;
     font-size:18px;
-    margin-bottom:20px;
+    margin-bottom:30px;
 }
 
 /* =========================
@@ -1086,31 +618,24 @@ footer small{
 }
 
 /* =========================
-   WHATSAPP
+   WHATSAPP FLOTANTE
 ========================= */
 
 .whatsapp{
     position:fixed;
     right:25px;
     bottom:25px;
-
     width:62px;
     height:62px;
-
     border-radius:50%;
-
     background:#20c76a;
     color:white;
-
     display:flex;
     align-items:center;
     justify-content:center;
-
     font-size:30px;
     text-decoration:none;
-
     box-shadow:0 5px 20px rgba(0,0,0,.3);
-
     z-index:2000;
     transition:.3s;
 }
@@ -1146,10 +671,6 @@ footer small{
         grid-template-columns:1fr;
     }
 
-    .gallery-grid{
-        grid-template-columns:1fr;
-    }
-
 }
 
 @media(max-width:600px){
@@ -1166,7 +687,7 @@ footer small{
     }
 
     .hero{
-        padding-top:180px;
+        padding-top:170px;
     }
 
     .hero h1{
@@ -1202,24 +723,14 @@ footer small{
         font-size:33px;
     }
 
-    .vehicle-info h2{
-        font-size:34px;
-    }
-
-    .sienna{
-        transform:translateX(-50%) scale(.75);
-    }
-
-    .sienna-scene{
-        height:350px;
-    }
-
 }
 
 </style>
 </head>
 
+
 <body>
+
 
 <!-- =========================
      MENÚ
@@ -1277,15 +788,13 @@ Samaná, Las Terrenas, Nagua, Punta Cana y mucho más.
 
 <div class="buttons">
 
-<a
-class="btn btn-whatsapp"
-href="https://wa.me/18298037997"
+<a class="btn btn-whatsapp"
+href="https://wa.me/+1 (829) 803-7997"
 target="_blank">
 💬 Reservar por WhatsApp
 </a>
 
-<a
-class="btn btn-gold"
+<a class="btn btn-gold"
 href="#destinos">
 📍 Ver destinos
 </a>
@@ -1314,7 +823,9 @@ Tu viaje comienza desde el momento en que reservas.
 Ofrecemos traslados privados adaptados a tus necesidades.
 </p>
 
+
 <div class="services">
+
 
 <div class="card">
 
@@ -1357,6 +868,7 @@ grupos y viajeros que buscan comodidad.
 
 </div>
 
+
 </div>
 
 </div>
@@ -1381,12 +893,14 @@ Conectamos diferentes puntos del país para que llegues
 a tu destino disfrutando el camino.
 </p>
 
+
 <div class="route-map">
 
 <div class="route-line line1"></div>
 <div class="route-line line2"></div>
 <div class="route-line line3"></div>
 <div class="route-line line4"></div>
+
 
 <div class="city santo-domingo">
 Santo Domingo
@@ -1443,47 +957,57 @@ Destinos <span>Destacados</span>
 ¿A dónde quieres ir? Nosotros te llevamos.
 </p>
 
+
 <div class="destinations">
+
 
 <div class="destination">
 <h3>Las Terrenas</h3>
 <p>Paraíso de Samaná</p>
 </div>
 
+
 <div class="destination">
 <h3>Samaná</h3>
 <p>Naturaleza y aventura</p>
 </div>
+
 
 <div class="destination">
 <h3>Nagua</h3>
 <p>Costa nordeste</p>
 </div>
 
+
 <div class="destination">
 <h3>Santo Domingo</h3>
 <p>Capital dominicana</p>
 </div>
+
 
 <div class="destination">
 <h3>Juan Dolio</h3>
 <p>Playa y tranquilidad</p>
 </div>
 
+
 <div class="destination">
 <h3>Punta Cana</h3>
 <p>El destino turístico</p>
 </div>
+
 
 <div class="destination">
 <h3>Puerto Plata</h3>
 <p>Mar y montaña</p>
 </div>
 
+
 <div class="destination">
 <h3>Santiago</h3>
 <p>Corazón del Cibao</p>
 </div>
+
 
 </div>
 
@@ -1498,61 +1022,15 @@ Destinos <span>Destacados</span>
 
 <section class="vehicle" id="vehiculo">
 
-<div class="container">
+<div class="container vehicle-grid">
 
-<div class="vehicle-grid">
 
 <div>
 
-<div class="sienna-scene">
-
-<div class="sun"></div>
-
-<div class="palm palm-one"></div>
-<div class="palm palm-two"></div>
-
-<div class="sienna-road"></div>
-
-<div class="car-shadow"></div>
-
-<div class="sienna">
-
-<div class="sienna-roof"></div>
-
-<div class="sienna-body">
-
-<div class="windshield"></div>
-
-<div class="window-front"></div>
-<div class="window-back"></div>
-
-<div class="headlight headlight-left"></div>
-<div class="headlight headlight-right"></div>
-
-<div class="grille"></div>
-
-<div class="toyota-logo">
-T
-</div>
-
-<div class="bumper"></div>
-
-<div class="mirror mirror-left"></div>
-<div class="mirror mirror-right"></div>
-
-<div class="wheel wheel-left"></div>
-<div class="wheel wheel-right"></div>
-
-</div>
-
-</div>
-
-<div class="vehicle-label">
-🚐 Toyota Sienna 2011 • Verde oscuro
-</div>
-
-</div>
-
+<img
+class="vehicle-photo"
+src="https://images.unsplash.com/photo-1549317661-bd32c8ce0db2?auto=format&fit=crop&w=1200&q=85"
+alt="Vehículo para traslados privados">
 </div>
 
 
@@ -1560,11 +1038,11 @@ T
 
 <h2>
 Viaja en nuestra
-<span>Toyota Sienna 2011</span>
+<span>Toyota Sienna</span>
 </h2>
 
 <p>
-Un vehículo amplio, cómodo y confiable para que puedas
+Un vehículo amplio y confortable para que puedas
 disfrutar tus traslados por República Dominicana.
 </p>
 
@@ -1583,59 +1061,6 @@ disfrutar tus traslados por República Dominicana.
 <li>⭐ Servicio privado y personalizado</li>
 
 </ul>
-
-</div>
-
-</div>
-
-
-<!-- GALERÍA SIN IMÁGENES EXTERNAS -->
-
-<div class="sienna-gallery">
-
-<h3>Conoce nuestro vehículo</h3>
-
-<div class="gallery-grid">
-
-<div class="gallery-card">
-
-<div class="mini-sienna">
-
-<div class="mini-car"></div>
-
-</div>
-
-<p>Toyota Sienna 2011</p>
-
-</div>
-
-
-<div class="gallery-card">
-
-<div class="mini-sienna">
-
-<div class="mini-car"></div>
-
-</div>
-
-<p>Verde oscuro</p>
-
-</div>
-
-
-<div class="gallery-card">
-
-<div class="mini-sienna">
-
-<div class="mini-car"></div>
-
-</div>
-
-<p>Confort y espacio</p>
-
-</div>
-
-</div>
 
 </div>
 
@@ -1660,7 +1085,9 @@ disfrutar tus traslados por República Dominicana.
 Queremos que cada kilómetro de tu viaje sea una buena experiencia.
 </p>
 
+
 <div class="experience-grid">
+
 
 <div class="experience-item">
 
@@ -1708,6 +1135,7 @@ Tu tranquilidad es una de nuestras principales prioridades.
 
 </div>
 
+
 </div>
 
 </div>
@@ -1734,7 +1162,7 @@ Te responderé para coordinar tu traslado.
 
 <a
 class="btn btn-whatsapp"
-href="https://wa.me/18298037997"
+href="https://wa.me/18090000000"
 target="_blank">
 
 💬 Solicitar traslado
@@ -1768,7 +1196,7 @@ Traslados privados por toda República Dominicana.
 
 <a
 class="btn btn-whatsapp"
-href="https://wa.me/18298037997"
+href="https://wa.me/18090000000"
 target="_blank">
 
 📲 Contactar por WhatsApp
@@ -1807,7 +1235,7 @@ Puntualidad, Confort y Seguridad
 
 <a
 class="whatsapp"
-href="https://wa.me/18298037997"
+href="https://wa.me/+1 (829) 803-7997"
 target="_blank"
 aria-label="WhatsApp">
 
@@ -1815,5 +1243,7 @@ aria-label="WhatsApp">
 
 </a>
 
+
 </body>
 </html>
+```
